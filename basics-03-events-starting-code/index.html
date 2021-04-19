@@ -23,9 +23,25 @@
       <button v-on:click="incrementCtr()"> Add</button> 
       <button v-on:click="incrementCtr"> Add</button>
       <button  v-on:click="decrementCtr">Reduce</button> -->
-      <button v-on:click="incrementCtr(5)"> Add 5</button>
-      <button  v-on:click="decrementCtr(5)">Reduce 5</button>
+      <button v-on:click="incrementCtr(5)">Add 5</button>
+      <button v-on:click="decrementCtr(5)">Reduce 5</button>
+
+      <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
+
+      <!-- <input type="text" v-bind:value="name" v-on:input="setName($event, 'Abejo')" v-on:keyup.enter="confirmInput" /> -->
+      <input type="text" v-model="name " />
+      <input type="text" v-model="lastName " />
+      <button v-on:click="resetInput">Reset Input</button>
+
+      <!-- <p>Your Name: {{ name }}</p> -->
+      <!-- <p>Your Name: {{ outputFullName() }}</p> -->
+      <p>Your Name: {{ fullName }}</p>
+
+      <!-- <form v-on:submit.prevent="submitForm">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form> -->
     </section>
   </body>
 </html>
